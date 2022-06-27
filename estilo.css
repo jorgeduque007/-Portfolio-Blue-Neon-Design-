@@ -1,0 +1,368 @@
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  }
+/**************************BACKGROUND+GRID**************************************************/
+
+.content {
+  display: grid;
+  grid-template-rows: 50px 250px 290px 1000px 200px 100px;
+  grid-template-columns: 1fr;
+  background: #232526;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+/**************************NAV-HEADER**************************************************/
+.nav__responsive-ul {
+  display: none;
+}
+
+.nav {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  grid-row: 1/2;
+}
+
+.nav__li {
+  display: inline-block;
+  padding: 12px;
+  color: #04d9ff;
+}
+.nav__li:hover > a {
+  color: rgb(255, 255, 255);
+}
+.nav__li:hover {
+  color: rgb(255, 255, 255);
+}
+
+.nav__li a {
+  color: #04d9ff;
+  text-decoration: none;
+}
+
+.nav__li i {
+  width: 30px;
+  box-sizing: border-box;
+  text-align: right;
+  margin-right: 5px;
+}
+
+.nav__responsive-button-container {
+  position: absolute;
+  width: 100%;
+  font-size: 25px;
+  color: #04d9ff;!important
+  margin-top: -64px;
+}
+
+.nav__responsive-button {
+  padding: 6px 20px;
+  text-align: center;
+  width: 100%;
+}
+
+/**************************POCHO-LOGO-WATER**************************************************/
+
+.liquid{
+  grid-row: 2/3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  
+}
+
+.liquid h2{
+  position: absolute;
+  font-size: 15vw;
+  
+}
+
+.liquid h2:nth-child(1){
+  color: white;
+  text-shadow: -1px 1px 0px #04d9ff,
+  -2px 2px 0px #04d9ff,
+  -3px 3px 0px #04d9ff,
+  -4px 4px 0px #04d9ff,
+  -5px 5px 0px #04d9ff,
+  -6px 6px 0px #04d9ff,
+  -7px 7px 0px #04d9ff,
+  -18px 18px 20px rgba(0, 0, 0, 0.5);
+  
+}
+
+.liquid h2:nth-child(2){
+  color: #04d9ff;
+  opacity: 0.5;
+  animation: animate 3s ease-in-out infinite;
+  
+ 
+}
+
+.liquid h2:nth-child(3){
+  color: #04d9ff;
+  opacity: 0.5;
+  animation: animate 6s ease-in-out infinite;
+  
+ 
+}
+.liquid h2:nth-child(4){
+  color: #04d9ff;
+  animation: animate 4s ease-in-out infinite;
+  
+ 
+}
+
+@keyframes animate {
+  0%,100%{
+    clip-path: polygon(0 46%, 16% 45%, 34% 52%, 50% 61%, 68% 65%, 85% 61%, 100% 53%, 100% 100%, 0% 100%);
+
+  }
+  50%{
+    clip-path: polygon(0 66%, 14% 73%, 34% 76%, 50% 71%, 64% 62%, 79% 55%, 100% 51%, 100% 100%, 0% 100%);
+
+  }
+}
+
+
+
+/***************************ABOUT ME**************************************************/
+.sobremi {
+  grid-row: 3/4;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.textosobremi {
+  width: 50%;
+  margin: 20px;
+  color: #04d9ff;
+  
+}
+.fotoperfil {
+  width: 300px;
+  max-width: 260px;
+  
+}
+.fotoperfil img {
+  border-radius: 40%;
+}
+/*********************************PROYECTOS*****************************************************/
+.proyectos {
+  grid-row: 4/5;
+  display: flex;
+  padding: 20px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+}
+.tituloproyectos{
+  width: 100%;
+  text-align: center;
+  color: #04d9ff;
+
+}
+.proyecto{
+  width: 200px;
+  height: 300px;
+  background: #fff;
+  margin: 70px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.proyecto::before{
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  transform: skewX(2deg) skewY(4deg);
+  background: linear-gradient(315deg,#04d9ff,#232526,#04d9ff);
+
+}
+
+.proyecto::after{
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  transform: skewX(2deg) skewY(4deg);
+  background: linear-gradient(315deg,#04d9ff,#232526,#04d9ff);
+  filter: blur(20px);
+}
+.proyecto span{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #232526;
+  z-index: 10; 
+}
+
+.proyecto h2{
+  position: relative;
+  z-index: 11;
+  color: white;
+
+}
+
+/*********************************HABILIDADES*****************************************************/
+.habilidades{
+  grid-row: 5/6;
+  display: flex;
+  padding: 20px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.titulohabilidades{
+  width: 100%;
+  text-align: center;
+  color: #04d9ff;
+  
+
+}
+/*********************************CONTACTO*****************************************************/
+
+.contacto{
+  grid-row: 6/7;
+  display: flex;
+  padding: 20px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.titulocontacto{
+  width: 100%;
+  text-align: center;
+  color: #04d9ff;
+
+}
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 1076px){
+  .content {
+ 
+    grid-template-rows: 50px 250px 290px 1450px 200px 100px;
+    grid-template-columns: 1fr;
+   
+  }
+
+}
+
+
+@media only screen and (max-width: 736px){
+  .content {
+ 
+    grid-template-rows: 50px 250px 290px 2800px 200px 100px;
+    grid-template-columns: 1fr;
+   
+  }
+  
+
+}
+
+
+
+@media only screen and (max-width: 600px) {
+  .nav__ul {
+    display: none;
+  }
+  .nav {
+    height: 37px;
+    width: 100%;
+  }
+
+  .nav__responsive-ul {
+    display: block;
+    position: absolute;
+    color: black;
+    width: 100%;
+    margin-top: 37px;
+    padding-top: 15px;
+    height: 50px;
+  }
+
+  .nav__li-container {
+    position: relative;
+    top: -1000px;
+    height: calc(100vh - 64px);
+    background: #04d9ff;
+    transition: all 1s;
+    z-index: 1;
+    width: 75%;
+    padding: 27px;
+  }
+
+  .nav__responsive-li {
+    width: 100%;
+    padding: 9px 20px;
+  }
+  .nav__responsive-li i {
+    width: 30px;
+    box-sizing: border-box;
+    text-align: center;
+    margin-right: 5px;
+    color: #016;
+  }
+  .nav__responsive-li a {
+    color: #016;
+    text-decoration: none;
+  }
+  .nav__responsive-ul:hover > .nav__li-container {
+    top: -27px;
+  }
+
+/*******************ABOUT ME RESPONSIVE****************************/
+.sobremi {
+  grid-row: 3/4;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+.textosobremi {
+  width: 80%;
+  margin: 20px;
+  color: #04d9ff;
+  
+}
+
+.content {
+ 
+  grid-template-rows: 50px 120px 500px 2800px 200px 100px;
+  grid-template-columns: 1fr;
+ 
+}
+/**************************LIQUID RESPONSIVE****************************************/
+
+.liquid h2{
+  position: absolute;
+  font-size: 20vw;
+  
+}
+
+}
